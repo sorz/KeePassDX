@@ -45,22 +45,11 @@ class AboutActivity : StylishActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
 
-        var version: String
-        var build: String
-        try {
-            version = packageManager.getPackageInfo(packageName, 0).versionName
-            build = BuildConfig.BUILD_VERSION
-        } catch (e: NameNotFoundException) {
-            Log.w(javaClass.simpleName, "Unable to get the app or the build version", e)
-            version = "Unable to get the app version"
-            build = "Unable to get the build version"
-        }
-
-        version = getString(R.string.version_label, version)
+        var version = "version"
         val versionTextView = findViewById<TextView>(R.id.activity_about_version)
         versionTextView.text = version
 
-        build = getString(R.string.build_label, build)
+        var build = "build"
         val buildTextView = findViewById<TextView>(R.id.activity_about_build)
         buildTextView.text = build
 

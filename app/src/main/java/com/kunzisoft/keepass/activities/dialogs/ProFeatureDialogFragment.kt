@@ -41,7 +41,7 @@ class ProFeatureDialogFragment : DialogFragment() {
             val builder = AlertDialog.Builder(activity)
 
             val stringBuilder = SpannableStringBuilder()
-            if (BuildConfig.CLOSED_STORE) {
+            if (true) {
                 stringBuilder.append(HtmlCompat.fromHtml(getString(R.string.html_text_ad_free), FROM_HTML_MODE_LEGACY)).append("\n\n")
                 stringBuilder.append(HtmlCompat.fromHtml(getString(R.string.html_text_buy_pro), FROM_HTML_MODE_LEGACY))
                 builder.setPositiveButton(R.string.download) { _, _ ->

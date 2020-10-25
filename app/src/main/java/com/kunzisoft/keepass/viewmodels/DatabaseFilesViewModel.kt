@@ -5,7 +5,7 @@ import android.app.backup.BackupManager
 import android.net.Uri
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
-import com.kunzisoft.keepass.app.App
+//import com.kunzisoft.keepass.app.App
 import com.kunzisoft.keepass.app.database.FileDatabaseHistoryAction
 import com.kunzisoft.keepass.app.database.IOActionTask
 import com.kunzisoft.keepass.model.DatabaseFile
@@ -29,29 +29,10 @@ class DatabaseFilesViewModel(application: Application) : AndroidViewModel(applic
     }
 
     fun checkDefaultDatabase() {
-        IOActionTask(
-                {
-                    UriUtil.parse(PreferencesUtil.getDefaultDatabasePath(getApplication<App>().applicationContext))
-                },
-                {
-                    defaultDatabase.value = it
-                }
-        ).execute()
     }
 
     fun setDefaultDatabase(databaseFile: DatabaseFile?) {
-        IOActionTask(
-                {
-                    val context = getApplication<App>().applicationContext
-                    UriUtil.parse(PreferencesUtil.getDefaultDatabasePath(context))
-                    PreferencesUtil.saveDefaultDatabasePath(context, databaseFile?.databaseUri)
-                    val backupManager = BackupManager(context)
-                    backupManager.dataChanged()
-                },
-                {
-                    checkDefaultDatabase()
-                }
-        ).execute()
+        
     }
 
     fun loadListOfDatabases() {

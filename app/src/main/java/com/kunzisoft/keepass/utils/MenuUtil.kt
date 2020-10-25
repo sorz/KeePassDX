@@ -34,7 +34,7 @@ import com.kunzisoft.keepass.settings.SettingsActivity
 object MenuUtil {
 
     fun contributionMenuInflater(inflater: MenuInflater, menu: Menu) {
-        if (!(BuildConfig.FULL_VERSION && BuildConfig.CLOSED_STORE))
+        if (false)
             inflater.inflate(R.menu.contribution, menu)
     }
 

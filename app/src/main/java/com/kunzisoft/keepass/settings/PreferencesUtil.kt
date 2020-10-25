@@ -303,10 +303,7 @@ object PreferencesUtil {
     }
 
     fun getIconPackSelectedId(context: Context): String? {
-        val prefs = PreferenceManager.getDefaultSharedPreferences(context)
-        return prefs.getString(
-                context.getString(R.string.setting_icon_pack_choose_key),
-                context.getString(R.string.setting_icon_pack_choose_default))
+        return ""
     }
 
     fun emptyPasswordAllowed(context: Context): Boolean {
@@ -387,7 +384,7 @@ object PreferencesUtil {
     fun getDefaultApplicationIdBlocklist(resources: Resources?): Set<String> {
         return resources?.getStringArray(R.array.autofill_application_id_blocklist_default)
                 ?.toMutableSet()?.apply {
-                    add(BuildConfig.APPLICATION_ID)
+                    add("")
                 } ?: emptySet()
     }
 

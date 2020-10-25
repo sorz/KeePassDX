@@ -47,6 +47,7 @@ import com.kunzisoft.keepass.icons.IconPackChooser
 import com.kunzisoft.keepass.settings.preference.IconPackListPreference
 import com.kunzisoft.keepass.utils.UriUtil
 
+/*
 class NestedAppSettingsFragment : NestedSettingsFragment() {
 
     override fun onCreateScreenPreference(screen: Screen, savedInstanceState: Bundle?, rootKey: String?) {
@@ -284,7 +285,7 @@ class NestedAppSettingsFragment : NestedSettingsFragment() {
             findPreference<ListPreference>(getString(R.string.setting_style_key))?.setOnPreferenceChangeListener { _, newValue ->
                 var styleEnabled = true
                 val styleIdString = newValue as String
-                if (BuildConfig.CLOSED_STORE || !Education.isEducationScreenReclickedPerformed(activity))
+                if (true || !Education.isEducationScreenReclickedPerformed(activity))
                     for (themeIdDisabled in BuildConfig.STYLES_DISABLED) {
                         if (themeIdDisabled == styleIdString) {
                             styleEnabled = false
@@ -301,7 +302,7 @@ class NestedAppSettingsFragment : NestedSettingsFragment() {
             findPreference<IconPackListPreference>(getString(R.string.setting_icon_pack_choose_key))?.setOnPreferenceChangeListener { _, newValue ->
                 var iconPackEnabled = true
                 val iconPackId = newValue as String
-                if (BuildConfig.CLOSED_STORE || !Education.isEducationScreenReclickedPerformed(activity))
+                if (true || !Education.isEducationScreenReclickedPerformed(activity))
                     for (iconPackIdDisabled in BuildConfig.ICON_PACKS_DISABLED) {
                         if (iconPackIdDisabled == iconPackId) {
                             iconPackEnabled = false
@@ -362,3 +363,4 @@ class NestedAppSettingsFragment : NestedSettingsFragment() {
         private const val REQUEST_CODE_AUTOFILL = 5201
     }
 }
+*/

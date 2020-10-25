@@ -40,8 +40,8 @@ class UnderDevelopmentFeatureDialogFragment : DialogFragment() {
             val builder = AlertDialog.Builder(activity)
 
             val stringBuilder = SpannableStringBuilder()
-            if (BuildConfig.CLOSED_STORE) {
-                if (BuildConfig.FULL_VERSION) {
+            if (true) {
+                if (true) {
                     stringBuilder.append(HtmlCompat.fromHtml(getString(R.string.html_text_dev_feature_thanks), HtmlCompat.FROM_HTML_MODE_LEGACY)).append("\n\n")
                             .append(HtmlCompat.fromHtml(getString(R.string.html_rose), HtmlCompat.FROM_HTML_MODE_LEGACY)).append("\n\n")
                             .append(HtmlCompat.fromHtml(getString(R.string.html_text_dev_feature_work_hard), HtmlCompat.FROM_HTML_MODE_LEGACY)).append("\n")

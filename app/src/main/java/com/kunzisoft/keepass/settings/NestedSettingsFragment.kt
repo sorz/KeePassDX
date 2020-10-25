@@ -68,7 +68,7 @@ abstract class NestedSettingsFragment : PreferenceFragmentCompat() {
                 Screen.APPLICATION,
                 Screen.FORM_FILLING,
                 Screen.ADVANCED_UNLOCK,
-                Screen.APPEARANCE -> NestedAppSettingsFragment()
+                Screen.APPEARANCE,
                 Screen.DATABASE,
                 Screen.DATABASE_SECURITY,
                 Screen.DATABASE_MASTER_KEY -> NestedDatabaseSettingsFragment()

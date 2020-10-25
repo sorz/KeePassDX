@@ -310,8 +310,6 @@
         <item translatable="false">@string/list_style_name_red</item>
         <item translatable="false">@string/list_style_name_purple</item>
     </string-array>
-    <!-- WARNING ! module icon-pack-material must be import in gradle -->
-    <string name="setting_icon_pack_choose_default" translatable="false">@string/material_resource_id</string>
 
     <!--  Password generator -->
     <string name="min_password_length" translatable="false">1</string>
