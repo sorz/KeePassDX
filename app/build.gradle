@@ -1,11 +1,18 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
+// publish to jitpack
+apply plugin: 'com.github.dcendents.android-maven'
+group = 'com.github.ahxxm'
+
 android {
     compileSdkVersion 29
     buildToolsVersion '29.0.3'
+    // jitpack ndk bundle
+    // https://jitpack.io/com/github/ahxxm/KeePassDX/master-2.8.7-gca0b6ee-2/build.log
+    ndkVersion '21.1.6352462'
 
     defaultConfig {
         applicationId "com.kunzisoft.keepass"
