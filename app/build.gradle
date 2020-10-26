@@ -5,7 +5,7 @@ apply plugin: 'kotlin-kapt'
 
 // publish to jitpack
 apply plugin: 'com.github.dcendents.android-maven'
-group = 'com.github.ahxxm'
+group = 'com.github.sorz'
 
 android {
     compileSdkVersion 29
